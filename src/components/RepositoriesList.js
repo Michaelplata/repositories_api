@@ -1,20 +1,23 @@
 import RepositoryItem from './RepositoryItem'
 
 const RepositoriesList = ({ 
-    repositories
+    repositories,
+    search
 }) => {
 
     return (
         <>
         <ul>
             {
-            repositories.map((repository, index) =>
+            repositories.
+            map((repository, index) =>
             <RepositoryItem
                 key={`repository_${index}`}
                 repository={repository}
                 />
             )
         }
+           
         </ul>
         </>
     );
